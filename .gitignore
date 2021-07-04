@@ -1,0 +1,8 @@
+dist
+node_modules
+transpiled
+worker
+.vscode
+.env
+wrangler.toml
+.idea
