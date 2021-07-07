@@ -1,0 +1,5 @@
+name = "slash-worker"
+type = "webpack"
+account_id = "fa2857ef7cc0efa34c451d18347ccc99"
+workers_dev = true
+webpack_config = "webpack.config.js"

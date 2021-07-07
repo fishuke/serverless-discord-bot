@@ -1,8 +1,0 @@
-name = "slash-worker"
-type = "webpack"
-account_id = ""
-workers_dev = true
-webpack_config = "webpack.config.js"
-
-[env.production]
-vars = { NOMICS_API_TOKEN = "", PUBLIC_KEY = "" }

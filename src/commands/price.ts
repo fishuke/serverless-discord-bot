@@ -3,8 +3,8 @@ import { InteractionResponseType } from 'slash-commands/dist/src/structures';
 export async function handlePrice(
     req: InteractionRequest,
 ): Promise<InteractionResponse> {
-    let NOMICS_API_TOKEN = '';
-    const apiUrl = `https://api.nomics.com/v1/currencies/ticker?key=${NOMICS_API_TOKEN}&ids=MM4`;
+    // noinspection TypeScriptUnresolvedVariable
+    const apiUrl = `https://api.nomics.com/v1/currencies/ticker?key=${process.env.NOMICS_API_TOKEN}&ids=MM4`;
     const init = {
         headers: {
             "content-type": "application/json;charset=UTF-8",

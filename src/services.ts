@@ -1,6 +1,5 @@
-let PUBLIC_KEY = '';
 export const publicKeys: { [id: string]: string } = {
-    discord: PUBLIC_KEY,
+    discord: (process.env.PUBLIC_KEY as string),
 };
 
 export const apiPrefix: { [id: string]: string } = {

@@ -4,7 +4,7 @@
     "description": "Cloudflare Worker for Discord Slash Commands.",
     "scripts": {
         "format": "prettier --write src/**/*.{ts,js,json} && prettier --write *.{json,md}",
-        "publish": "wrangler publish",
+        "publish": "wrangler publish --env production",
         "watch": "wrangler preview --watch"
     },
     "devDependencies": {

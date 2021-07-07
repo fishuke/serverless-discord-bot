@@ -27,8 +27,8 @@ module.exports = {
     plugins: [
         new ForkTsCheckerWebpackPlugin(),
         new EnvironmentPlugin({
-            NOMICS_API_TOKEN: 'unknown',
-            PUBLIC_KEY: 'unknown',
+            NOMICS_API_TOKEN: JSON.stringify(process.env.NOMICS_API_TOKEN),
+            PUBLIC_KEY: JSON.stringify(process.env.PUBLIC_KEY),
         })
     ]
 };
