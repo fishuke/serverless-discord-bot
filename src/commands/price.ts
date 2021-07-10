@@ -16,7 +16,7 @@ export async function handlePrice(
     return {
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
         data: {
-            content: `Current price is **${responseBody[0].price}$**.`,
+            content: `Current price is **$${responseBody[0].price}**.`,
         },
     };
 }
