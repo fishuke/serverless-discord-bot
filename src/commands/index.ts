@@ -1,5 +1,6 @@
 // todo: should this go into types
 import { handleHolders } from './holders';
+import { handleMarketCap } from './mcap';
 
 export {
     createOriginal,
@@ -18,4 +19,5 @@ export const handlers: {
 } = {
     '860831571078283266': handlePrice,
     '862306068369244250': handleHolders,
+    '': handleMarketCap
 };
