@@ -1,5 +1,5 @@
 import { InteractionResponseType } from 'slash-commands/dist/src/structures';
-import { formatLargeNumber } from './utils';
+import { formatLargeNumber } from '../utils';
 
 export async function handleMarketCap(
     req: InteractionRequest,

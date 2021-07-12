@@ -20,6 +20,6 @@ export const handlers: {
 } = {
     '860831571078283266': handlePrice,
     '862306068369244250': handleHolders,
-    '': handleMarketCap,
-    '1': handleVolume
+    '864118958545829899': handleMarketCap,
+    '864119140943134750': handleVolume
 };

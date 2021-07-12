@@ -1,5 +1,5 @@
 import { InteractionResponseType } from 'slash-commands/dist/src/structures';
-import { formatLargeNumber, formatPercentageChange } from './utils';
+import { formatLargeNumber, formatPercentageChange } from '../utils';
 
 export async function handleVolume(
     req: InteractionRequest,
