@@ -1,5 +1,5 @@
 import { InteractionResponseType } from 'slash-commands/dist/src/structures';
-import { formatPercentageChange } from './utils';
+import { formatPercentageChange } from '../utils';
 
 export async function handlePrice(
     req: InteractionRequest,
