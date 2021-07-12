@@ -10,6 +10,7 @@ export {
 } from '../lib/endpoints';
 
 import { handlePrice } from './price';
+import { handleVolume } from './volume';
 
 type complexCommand = (_: InteractionWithContext) => Promise<void>;
 type simpleCommand = (_: InteractionRequest) => Promise<InteractionResponse>;
@@ -19,5 +20,6 @@ export const handlers: {
 } = {
     '860831571078283266': handlePrice,
     '862306068369244250': handleHolders,
-    '': handleMarketCap
+    '': handleMarketCap,
+    '1': handleVolume
 };

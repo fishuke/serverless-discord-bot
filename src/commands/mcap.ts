@@ -1,4 +1,5 @@
 import { InteractionResponseType } from 'slash-commands/dist/src/structures';
+import { formatLargeNumber } from './utils';
 
 export async function handleMarketCap(
     req: InteractionRequest,
@@ -28,15 +29,4 @@ export async function handleMarketCap(
             content: commandResponse
         }
     };
-}
-
-function formatLargeNumber(number) {
-    const num = Math.abs(Number(number));
-    return num >= 1.0e+9
-        ? (num / 1.0e+9).toFixed(2) + "B"
-        : num >= 1.0e+6
-            ? (num / 1.0e+6).toFixed(2) + "M"
-            : num >= 1.0e+3
-                ? (num / 1.0e+3).toFixed(2) + "K"
-                : num;
 }

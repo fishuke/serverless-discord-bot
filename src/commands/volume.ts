@@ -1,7 +1,7 @@
 import { InteractionResponseType } from 'slash-commands/dist/src/structures';
-import { formatPercentageChange } from './utils';
+import { formatLargeNumber, formatPercentageChange } from './utils';
 
-export async function handlePrice(
+export async function handleVolume(
     req: InteractionRequest,
 ): Promise<InteractionResponse> {
     // noinspection TypeScriptUnresolvedVariable
@@ -15,8 +15,10 @@ export async function handlePrice(
     try {
         const response = await fetch(apiUrl, init);
         const responseBody = await response.json();
-        const priceChange = responseBody[0]['1d'].price_change_pct;
-        commandResponse = `Current price is **$${parseFloat(responseBody[0].price).toFixed(4)}** (${formatPercentageChange(priceChange)}%).`;
+        const dailyData = responseBody[0]['1d'];
+        const volume = dailyData.volume;
+        const volumeChange = dailyData.volume_change_pct;
+        commandResponse = `24h volume is **$${formatLargeNumber(volume)}** (${formatPercentageChange(volumeChange)}%).`;
     } catch {
         commandResponse = `Something is wrong - try again a bit later.`;
     }
