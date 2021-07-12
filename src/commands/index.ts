@@ -18,6 +18,7 @@ type simpleCommand = (_: InteractionRequest) => Promise<InteractionResponse>;
 export const handlers: {
     [id: string]: complexCommand | simpleCommand;
 } = {
+    // 'commandID(created by owner of the bot)': CommandClass
     '860831571078283266': handlePrice,
     '862306068369244250': handleHolders,
     '864118958545829899': handleMarketCap,
