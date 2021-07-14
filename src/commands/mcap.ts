@@ -18,7 +18,7 @@ export async function handleMarketCap(
         const responseBody = await response.json()
         const marketCapUsd = responseBody.market_data.market_cap.usd;
 
-        commandResponse = `Current market cap is **$${formatLargeNumber(marketCapUsd)}**.`;
+        commandResponse = `:rocket: Current market cap is **$${formatLargeNumber(marketCapUsd)}**.`;
     } catch {
         commandResponse = `Something is wrong - try again a bit later.`;
     }

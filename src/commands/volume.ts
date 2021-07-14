@@ -18,7 +18,7 @@ export async function handleVolume(
         const dailyData = responseBody[0]['1d'];
         const volume = dailyData.volume;
         const volumeChange = dailyData.volume_change_pct;
-        commandResponse = `24h volume is **$${formatLargeNumber(volume)}** (${formatPercentageChange(volumeChange)}%).`;
+        commandResponse = `:bar_chart: 24h volume is **$${formatLargeNumber(volume)}** (${formatPercentageChange(volumeChange)}%).`;
     } catch {
         commandResponse = `Something is wrong - try again a bit later.`;
     }

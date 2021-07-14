@@ -15,7 +15,7 @@ export async function handleHolders(
     return {
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
         data: {
-            content: `Current holders count is **${responseBody.tokenInfo.holdersCount}**.`,
+            content: `:diamondhands: Current holders count is **${responseBody.tokenInfo.holdersCount}**.`,
         },
     };
 }
