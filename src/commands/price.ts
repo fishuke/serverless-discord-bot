@@ -16,7 +16,7 @@ export async function handlePrice(
         const response = await fetch(apiUrl, init);
         const responseBody = await response.json();
         const priceChange = responseBody[0]['1d'].price_change_pct;
-        commandResponse = `Current price is **$${parseFloat(responseBody[0].price).toFixed(4)}** (${formatPercentageChange(priceChange)}%).`;
+        commandResponse = `:coin: Current price is **$${parseFloat(responseBody[0].price).toFixed(4)}** (${formatPercentageChange(priceChange)}%).`;
     } catch {
         commandResponse = `Something is wrong - try again a bit later.`;
     }
