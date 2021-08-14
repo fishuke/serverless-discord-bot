@@ -1,8 +1,6 @@
 ## Slash-Worker
 
-Discord Cryptocurrency (Million Token) Bot's slash commands on Cloudflare's Worker service.
-
-Join here to test: <a href="https://discord.gg/NUJERJ5v4k">Discord</a>
+Discord slash commands bot on Cloudflare's Worker service.
 
 Note:
 <br>
